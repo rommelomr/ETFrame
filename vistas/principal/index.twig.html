@@ -1,0 +1,27 @@
+<?php echo 'HOLA'; Funciones::verificarLogin(); ?>
+<title>Principal</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		
+		<form method="post">
+		<?php
+			$bot=null;
+			$permiso=Funciones::PGSC('tipo');
+
+			if($permiso[0]=='1'){
+				
+				//$bot[0]=Crear::botonDropdown('Usuarios,login,usuarios');
+				$bot[0]=['Usuarios','login','usuarios'];
+				
+				
+			}
+			Crear::navbar([Crear::dropdownNavBarSave($bot)]);
+		?>
+		</form>
+	
+	</div>
+</body>
+</html>
+
